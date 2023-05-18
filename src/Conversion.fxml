@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!-- XML code for a currency converter user interface -->
+<!-- The code defines the layout and components of the user interface using JavaFX -->
+
+<AnchorPane prefHeight="349.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConversionController">
+    <!-- Text field for entering the amount to be converted -->
+    <TextField fx:id="amountTextField" layoutX="300.0" layoutY="139.0" promptText="Enter Amount" />
+    <!-- Text field for displaying the converted amount -->
+    <TextField fx:id="convertedAmountTextField" layoutX="300.0" layoutY="212.0" promptText="Output" />
+    <!-- Combo box for selecting the source currency -->
+    <ComboBox fx:id="sourceCurrencyComboBox" layoutX="100.0" layoutY="138.0" prefWidth="150.0" promptText="Select Currency" />
+
+    <!-- Combo box for selecting the target currency -->
+    <ComboBox fx:id="targetCurrencyComboBox" layoutX="100.0" layoutY="211.0" prefWidth="150.0" promptText="Select Currency" />
+
+    <!-- Button for triggering the conversion -->
+    <Button fx:id="convertButton" layoutX="199.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleConvertButtonClicked" prefHeight="31.0" prefWidth="116.0" text="Convert Now" />
+
+    <!-- Label for indicating the conversion direction -->
+    <Label layoutX="100.0" layoutY="110.0" text="Convert From" />
+
+    <!-- Label for indicating the conversion target -->
+    <Label layoutX="100.0" layoutY="186.0" text="Convert To" />
+
+    <!-- Text for displaying the title of the converter -->
+    <Text fill="#37a2c9" fontSmoothingType="LCD" layoutX="79.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currency Converter" textAlignment="CENTER" wrappingWidth="354.80345153808594">
+        <font>
+            <Font name="System Bold" size="40.0" />
+        </font>
+    </Text>
+</AnchorPane>
